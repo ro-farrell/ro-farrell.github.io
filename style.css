@@ -1,0 +1,69 @@
+html {
+    height: 100%;
+  }
+  body {
+    background-color: #101010;
+    color: #EEEEEE;
+    text-align: center;
+    font-family: "Tahoma", sans-serif;
+    font-size: 12pt;
+  }
+  
+  ul {
+    text-align: left;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+#image, #shame {
+    width: 50%;
+    margin: auto;
+}
+#centralizer {
+    text-align: left;
+}
+
+#back {
+    position:fixed; bottom:10px; left:10px
+}
+#inimg {
+  max-height: 100pt;
+}
+#notimage2{
+  text-align: left;
+}
+
+  @media (min-aspect-ratio: 1/1) {
+    #notimage, #notimage2 {
+        width: 50%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 80%;
+        margin:auto;
+    }
+    #image {
+        width: 30%;
+    }
+    #cover {
+        max-height: 150pt;
+    }
+    #bean {
+      max-height: 250pt;
+    }
+    #blurb {
+        text-align:left;
+    }
+    #centralizer,#centralizer2 {
+        width: 70%;
+        margin: auto;
+    }
+  }
