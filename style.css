@@ -38,6 +38,9 @@ html {
 #notimage2{
   text-align: left;
 }
+#cover, #bean{
+  width:100%;
+}
 
   @media (min-aspect-ratio: 1/1) {
     #notimage, #notimage2 {
@@ -57,10 +60,10 @@ html {
         width: 30%;
     }
     #cover {
-        max-height: 150pt;
+        max-width: 112pt;
     }
     #bean {
-      max-height: 250pt;
+      max-width: 188pt;
     }
     #blurb {
         text-align:left;
