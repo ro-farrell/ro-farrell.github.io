@@ -12,6 +12,9 @@ html {
   ul {
     text-align: left;
   }
+  a {
+    color:lightblue
+  }
 
   #container {
     display: flex;
