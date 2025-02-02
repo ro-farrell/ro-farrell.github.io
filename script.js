@@ -1,5 +1,19 @@
-var state = 0
-var num = 0
+var state = 0;
+var num = 0;
+var difficulty = 10;
+var timer = 20;
+var difslider = document.getElementById("difslider");
+var timslider = document.getElementById("timslider");
+difslider.oninput = function() {
+    difficulty = this.value;
+    document.getElementById("dif").innerHTML = this.value;
+}
+timslider.oninput = function() {
+    timer = this.value;
+    document.getElementById("timer").innerHTML = this.value;
+}
+
+
 function primeFactors(n) {
     let factors = [];
     let divisor = 2;
@@ -19,9 +33,12 @@ function act(){
         document.getElementById("facts").innerHTML = "";
         state = 1
         let ends = [1,3,7,9]
-        num = 50+10*Math.floor(Math.random()*100) + ends[Math.floor(Math.random()*4)]
+        let x = 30*difficulty;
+        let y = 10*Math.floor(Math.random()*7*difficulty);
+        let z = ends[Math.floor(Math.random()*4)];
+        num = x + y + z;
         document.getElementById("num").innerHTML = num
-        let sec = 200;
+        let sec = timer * 10;
         inter = setInterval(function() {
         sec--;
         document.getElementById("tim").innerHTML = Math.floor(sec/10)  +"." + (sec%10)+ "s";
