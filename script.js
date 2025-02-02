@@ -36,6 +36,9 @@ function act(){
         let x = 30*difficulty;
         let y = 10*Math.floor(Math.random()*7*difficulty);
         let z = ends[Math.floor(Math.random()*4)];
+        while ((x+y+z) % 3 == 0){
+            y = 10*Math.floor(Math.random()*7*difficulty);
+        }
         num = x + y + z;
         document.getElementById("num").innerHTML = num
         let sec = timer * 10;
